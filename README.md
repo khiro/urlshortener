@@ -1,6 +1,6 @@
 ## About
 
-url shortenerr for node.js
+url shortener for node.js
 
 ## Correspondig Site
 
