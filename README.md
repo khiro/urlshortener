@@ -5,17 +5,19 @@ url shortener for node.js
 ## Correspondig Site
 
 * [goo.gl](http://goo.gl)
+* [bit.ly](http://bitly.com)
 
 ## Sample
 
 ```javascript
 var shortener = require('shortener');
 
-var url = 'http://www.google.com';
-var key = 'KEY';
-
 var s = new shortener.Shortener();
-s.google(url, key, function(result) {
+s.google('http://www.google.com', 'key', function(result) {
   console.log(result);
+});
+
+s.bitly('http://bit.ly', 'user', 'key', 'json', function(result) {
+    console.log(result);
 });
 ```
