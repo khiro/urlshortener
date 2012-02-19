@@ -1,4 +1,4 @@
-var shortener = require('../shortener');
+var shortener = require('../lib/shortener');
 
 exports['urlshorener goo.gle'] = function (test) {
 	var url = 'http://www.google.com';

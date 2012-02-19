@@ -1,5 +1,5 @@
 var util = require('util');
-var shortener = require('./shortener');
+var shortener = require('./lib/shortener');
 
 var s = new shortener.Shortener();
 
