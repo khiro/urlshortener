@@ -1,0 +1,17 @@
+{
+  "author": "khiro <kuzuno@gmail.com> (http://khiro.org)",
+  "name": "urlshortener",
+  "description": "url shortener(goo.gl, bit.ly) for node.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/khiro/urlshortener",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/khiro/urlshortener.git"
+  },
+  "engines": {
+    "node": "~0.7.4 || 0.8"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
