@@ -17,7 +17,7 @@ s.google('http://www.google.com', 'key', function(result) {
   console.log(result);
 });
 
-s.bitly('http://bit.ly', 'user', 'key', 'json', function(result) {
+s.bitly('http://bit.ly', 'key', 'json', function(result) {
     console.log(result);
 });
 ```
