@@ -16,10 +16,9 @@ var s = new shortener.Shortener();
 // bit.ly
 (function() {
   var url = 'http://bit.ly';
-  var user = 'USER';
   var key = 'KEY';
   var format = 'json';
-  s.bitly(url, user, key, format, function(result) {
+  s.bitly(url, key, format, function(result) {
     console.log(result);
     if (result['status_code'] === 200 && result['status_txt'] === 'OK') {
       console.log(result['data']['url']);

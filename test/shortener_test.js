@@ -18,11 +18,10 @@ exports['urlshorener goo.gle'] = function (test) {
 
 exports['urlshorener bit.ly'] = function (test) {
   var url = 'http://bit.ly';
-  var user = 'USER';
   var key = 'KEY';
   var format = 'json';
 	var s = new shortener.Shortener();
-	s.bitly(url, user, key, format, function(result) {
+	s.bitly(url, key, format, function(result) {
 		test.deepEqual(result
                    , { status_code: 200,
                        status_txt: 'OK',
