@@ -1,15 +1,19 @@
 {
   "author": "khiro <kuzuno@gmail.com> (http://khiro.org)",
+  "contributors": [{
+    "name": "Konstantin Azizov",
+    "email": "kazizov@readdle.com"
+  }],
   "name": "urlshortener",
   "description": "url shortener(goo.gl, bit.ly) for node.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/khiro/urlshortener",
   "repository": {
     "type": "git",
     "url": "git://github.com/khiro/urlshortener.git"
   },
   "engines": {
-    "node": "~0.7.4 || 0.8"
+    "node": ">0.6"
   },
   "bugs" : { 
     "url" : "https://github.com/khiro/urlshortener/issues" 
