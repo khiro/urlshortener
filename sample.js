@@ -8,8 +8,9 @@ var s = new shortener.Shortener();
   var url = 'http://www.google.com';
   var key = 'KEY';
   s.google(url, key, function(result) {
-    console.log(result);
-    console.log(result['longUrl']);
+    console.log('\nGoogle:');
+    console.log('Long url:', result.longUrl);
+    console.log('Shortened url:', result.shortUrl);
   });
 })();
 
@@ -19,11 +20,8 @@ var s = new shortener.Shortener();
   var key = 'KEY';
   var format = 'json';
   s.bitly(url, key, format, function(result) {
-    console.log(result);
-    if (result['status_code'] === 200 && result['status_txt'] === 'OK') {
-      console.log(result['data']['url']);
-    } else {
-      console.log('can\'t get short url');
-    }
+    console.log('\nBitly:');
+    console.log('Long url:', result.longUrl);
+    console.log('Short url:', result.shortUrl);
   });
 })();

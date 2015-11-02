@@ -7,8 +7,7 @@ exports['urlshorener goo.gle'] = function (test) {
 	s.google(url, key, function(result) {
 		test.deepEqual(result
 					   , { 
-						   kind: 'urlshortener#url'
-						   , id: 'http://goo.gl/fbsS'
+						   shortUrl: 'http://goo.gl/fbsS'
 						   , longUrl: 'http://www.google.com/' 
 					   }
 					   , "Deep equal for www.goo.gl");
@@ -23,15 +22,11 @@ exports['urlshorener bit.ly'] = function (test) {
 	var s = new shortener.Shortener();
 	s.bitly(url, key, format, function(result) {
 		test.deepEqual(result
-                   , { status_code: 200,
-                       status_txt: 'OK',
-                       data:
-                       { long_url: 'http://bit.ly/',
-                         url: 'http://bit.ly/wq5Qeg',
-                         hash: 'wq5Qeg',
-                         global_hash: '2lkCBm',
-                         new_hash: 0 } }
-					         , "Deep equal for bit.ly");
+                   , {
+                   	shortUrl: 'http://bit.ly/wq5Qeg'
+                   	, longUrl: 'http://bit.ly/'
+                   }
+                   , "Deep equal for bit.ly");
     test.done();
 	});
 };
