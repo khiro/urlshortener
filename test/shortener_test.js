@@ -22,11 +22,11 @@ exports['urlshorener bit.ly'] = function (test) {
   	var s = new shortener.Shortener();
   	s.bitly(url, key, format, function(result) {
   		test.deepEqual(result
-                  		, {
-                  			shortUrl: 'http://bit.ly/wq5Qeg'
-                  			, longUrl: 'http://bit.ly/'
-                  		}
-                  		, "Deep equal for bit.ly");
+					   , {
+						   shortUrl: 'http://bit.ly/wq5Qeg'
+						   , longUrl: 'http://bit.ly/'
+					   }
+					   , "Deep equal for bit.ly");
     test.done();
 	});
 };
@@ -36,11 +36,11 @@ exports['urlshorener readability'] = function (test) {
   	var s = new shortener.Shortener();
   	s.bitly(url, function(result) {
   		test.deepEqual(result
-  						, {
-                   			shortUrl: 'http://rdd.me/-6tqmqpqj'
-                   			, longUrl: 'https://www.readability.com/'
-                   		}
-                   		, "Deep equal for bit.ly");
+					   , {
+						   shortUrl: 'http://rdd.me/-6tqmqpqj'
+						   , longUrl: 'https://www.readability.com/'
+					   }
+					   , "Deep equal for bit.ly");
     test.done();
 	});
 };
