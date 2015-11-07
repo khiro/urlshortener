@@ -34,7 +34,7 @@ exports['urlshorener bit.ly'] = function (test) {
 exports['urlshorener readability'] = function (test) {
   	var url = 'https://www.readability.com/';
   	var s = new shortener.Shortener();
-  	s.bitly(url, function(result) {
+  	s.readability(url, function(result) {
   		test.deepEqual(result
 					   , {
 						   shortUrl: 'http://rdd.me/-6tqmqpqj'
