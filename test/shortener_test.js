@@ -16,18 +16,31 @@ exports['urlshorener goo.gle'] = function (test) {
 };
 
 exports['urlshorener bit.ly'] = function (test) {
-  var url = 'http://bit.ly';
-  var key = 'KEY';
-  var format = 'json';
-	var s = new shortener.Shortener();
-	s.bitly(url, key, format, function(result) {
-		test.deepEqual(result
-                   , {
-                   	shortUrl: 'http://bit.ly/wq5Qeg'
-                   	, longUrl: 'http://bit.ly/'
-                   }
-                   , "Deep equal for bit.ly");
+  	var url = 'http://bit.ly';
+  	var key = 'KEY';
+  	var format = 'json';
+  	var s = new shortener.Shortener();
+  	s.bitly(url, key, format, function(result) {
+  		test.deepEqual(result
+					   , {
+						   shortUrl: 'http://bit.ly/wq5Qeg'
+						   , longUrl: 'http://bit.ly/'
+					   }
+					   , "Deep equal for bit.ly");
     test.done();
 	});
 };
 
+exports['urlshorener readability'] = function (test) {
+  	var url = 'https://www.readability.com/';
+  	var s = new shortener.Shortener();
+  	s.readability(url, function(result) {
+  		test.deepEqual(result
+					   , {
+						   shortUrl: 'http://rdd.me/-6tqmqpqj'
+						   , longUrl: 'https://www.readability.com/'
+					   }
+					   , "Deep equal for bit.ly");
+    test.done();
+	});
+};

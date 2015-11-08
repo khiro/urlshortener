@@ -25,3 +25,12 @@ var s = new shortener.Shortener();
     console.log('Short url:', result.shortUrl);
   });
 })();
+
+(function() {
+  var url = 'https://www.readability.com/';
+  s.readability(url, function(result) {
+    console.log('\nReadability:');
+    console.log('Long url:', result.longUrl);
+    console.log('Short url:', result.shortUrl);
+  });
+})();
