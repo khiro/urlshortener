@@ -2,7 +2,7 @@ var shortener = require('../lib/shortener');
 
 exports['urlshorener goo.gle'] = function (test) {
 	var url = 'http://www.google.com';
-	var key = 'KEY';
+	var key = process.env.GOOGLE;
 	var s = new shortener.Shortener();
 	s.google(url, key, function(result) {
 		test.deepEqual(result
@@ -17,7 +17,7 @@ exports['urlshorener goo.gle'] = function (test) {
 
 exports['urlshorener bit.ly'] = function (test) {
   	var url = 'http://bit.ly';
-  	var key = 'KEY';
+  	var key = process.env.BITLY;
   	var format = 'json';
   	var s = new shortener.Shortener();
   	s.bitly(url, key, format, function(result) {
