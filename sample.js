@@ -1,4 +1,3 @@
-var util = require('util');
 var shortener = require('./lib/shortener');
 
 var s = new shortener.Shortener();
@@ -33,4 +32,13 @@ var s = new shortener.Shortener();
     console.log('Long url:', result.longUrl);
     console.log('Short url:', result.shortUrl);
   });
+})();
+
+(function() {
+  var url = 'https://sites.google.com/site/mtnymobi2/';
+  s.mtny(url, function(result) {
+    console.log('\nMtny:');
+    console.log('Long url:', result.longUrl);
+    console.log('Short url:', result.shortUrl);
+  })
 })();
