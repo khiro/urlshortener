@@ -2,10 +2,7 @@
 
 url shortener for node.js
 
-## Correspondig Site
-
-* [goo.gl](http://goo.gl)
-* [bit.ly](http://bitly.com)
+[List of supported/comming services](https://github.com/khiro/urlshortener/issues/7)
 
 ## Sample
 
@@ -13,13 +10,18 @@ url shortener for node.js
 var shortener = require('shortener');
 
 var s = new shortener.Shortener();
-s.google('http://www.google.com', 'key', function(result) {
-  console.log(result);
+
+s.readability('https://www.readability.com/', function(result) {
+  console.log('\nReadability:');
+  console.log('Long url:', result.longUrl);
+  console.log('Short url:', result.shortUrl);
 });
 
-s.bitly('http://bit.ly', 'key', 'json', function(result) {
-    console.log(result);
-});
+s.mtny('https://sites.google.com/site/mtnymobi2/', function(result) {
+  console.log('\nMtny:');
+  console.log('Long url:', result.longUrl);
+  console.log('Short url:', result.shortUrl);
+})
 ```
 
 ## Development
