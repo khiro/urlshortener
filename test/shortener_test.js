@@ -44,3 +44,17 @@ exports['urlshorener readability'] = function (test) {
     test.done();
 	});
 };
+
+exports['urlshorener mtny'] = function (test) {
+  	var url = 'https://sites.google.com/site/mtnymobi2/';
+  	var s = new shortener.Shortener();
+  	s.mtny(url, function(result) {
+  		test.deepEqual(result
+					   , {
+						   shortUrl: 'http://mtny.mobi/69kW'
+						   , longUrl: 'https://sites.google.com/site/mtnymobi2/'
+					   }
+					   , "Deep equal for mtny.mobi");
+    test.done();
+	});
+};
