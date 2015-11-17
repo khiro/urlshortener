@@ -34,9 +34,10 @@ npm install
 ```
 ### Testing
 
-Insert keys in `test/shortener_test.js` and run:
+Replace `GOOGLE TOKEN` and `BITLY TOKEN` with corresponding tokens:
+
 ```
-npm test
+GOOGLE="GOOGLE TOKEN" BITLY="BITLY TOKEN" npm test
 ```
 
 ## License
