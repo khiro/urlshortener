@@ -58,3 +58,19 @@ exports['urlshorener mtny'] = function (test) {
     test.done();
 	});
 };
+
+exports['urlshorener adf.ly'] = function (test) {
+  	var url = 'http://example.com/';
+  	var key = process.env.ADFLY;
+  	var uid = process.env.ADFLY_UID;
+  	var s = new shortener.Shortener();
+  	s.adfly(url, key, uid, function(result) {
+  		test.deepEqual(result
+					   , {
+						   shortUrl: 'http://adf.ly/1S0QLI'
+						   , longUrl: 'http://example.com/'
+					   }
+					   , "Deep equal for adf.ly");
+    test.done();
+	});
+};
