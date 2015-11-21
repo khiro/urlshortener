@@ -25,6 +25,7 @@ var s = new shortener.Shortener();
   });
 })();
 
+// readability
 (function() {
   var url = 'https://www.readability.com/';
   s.readability(url, function(result) {
@@ -34,11 +35,24 @@ var s = new shortener.Shortener();
   });
 })();
 
+// mtny.mobi
 (function() {
   var url = 'https://sites.google.com/site/mtnymobi2/';
   s.mtny(url, function(result) {
     console.log('\nMtny:');
     console.log('Long url:', result.longUrl);
     console.log('Short url:', result.shortUrl);
-  })
+  });
+})();
+
+// adf.ly
+(function() {
+  var url = 'http://example.com/';
+  var key = 'KEY';
+  var uid = 'UID';
+  s.adfly(url, key, uid, function(result) {
+    console.log('\nAdf.ly:');
+    console.log('Long url:', result.longUrl);
+    console.log('Short url:', result.shortUrl);
+  });
 })();
