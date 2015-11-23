@@ -7,8 +7,8 @@
     }
   ],
   "name": "urlshortener",
-  "description": "url shortener(goo.gl, bit.ly) for node.js",
-  "version": "0.2.0",
+  "description": "url shortener for node.js",
+  "version": "0.3.0",
   "homepage": "https://github.com/khiro/urlshortener",
   "repository": {
     "type": "git",
@@ -23,12 +23,7 @@
   "scripts": {
     "test": "nodeunit test/shortener_test.js"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/khiro/urlshortener/raw/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "dependencies": {
     "request": "^2.65.0"
   },
