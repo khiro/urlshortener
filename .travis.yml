@@ -7,6 +7,8 @@ node_js:
 - '0.11'
 - '0.10'
 - iojs
+script:
+  - '[ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_PULL_REQUEST" == "false" ] && npm test || false'
 env:
   global:
   - secure: MHWFVzCNT3YgBM9Ns8mGuy28ESrsXTvJAMgd9K99FhqqMC2mRv6DiRUGtjVgi+nlxCl1aEPBAJMHhTin/NnW0hHKIjPetu4rUzkvOkcCjczjVyr0AYhlRcWYsXT7Dh7z5MM+JCPtLjbaJ1aSwKDMJiYfQmOFnxh5RvlGAzG3UTY=
